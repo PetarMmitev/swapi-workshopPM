@@ -1,4 +1,5 @@
 console.log("its working");
+const containerEl = document.querySelector(".container");
 
 const STARWARS_URL = "https://swapi.dev/api/people";
 
@@ -9,6 +10,7 @@ function fetchCharacters() {
     })
     .then(function (data) {
       console.log(data);
+      renderCharacterTable(containerEl, data.results);
     });
 }
 
@@ -25,7 +27,6 @@ function renderCharacterTable(containerEl, characters) {
     <td>${character.gender}</td>
     <td>${character.birth_year}</td>
   </tr>`;
-    containerEl.innerHTML = characterHTML;
   }
   containerEl.innerHTML = `
   <table>
@@ -43,16 +44,15 @@ function renderCharacterTable(containerEl, characters) {
      </tbody>
    </table>
 `;
+
+  //   let characterHTML = "";
+  // }
+  // for (let reminder of ) {
+  //   remindersHTML += `
+  //       <tr>
+  //         <td style="color: ${reminder.color}" >${reminder.title}</td>
+  //         <td>${reminder.priority}</td>
+  //         <td>${reminder.description}</td>
+  //       </tr>
+  //       `;
 }
-renderCharacterTable;
-//   let characterHTML = "";
-// }
-// for (let reminder of ) {
-//   remindersHTML += `
-//       <tr>
-//         <td style="color: ${reminder.color}" >${reminder.title}</td>
-//         <td>${reminder.priority}</td>
-//         <td>${reminder.description}</td>
-//       </tr>
-//       `;
-// }
