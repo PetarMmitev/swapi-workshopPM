@@ -1,0 +1,21 @@
+body {
+  background-image: url(assets/Star_Wars_Logo.svg.png);
+}
+
+.joda .ship {
+  display: inline-block;
+}
+
+.joda {
+  padding-right: 1400px;
+  padding-left: 400px;
+  padding-top: 500px;
+}
+
+.ship {
+  max-width: 400px;
+}
+
+td tr {
+  border: 2px;
+}
