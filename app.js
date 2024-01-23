@@ -18,7 +18,6 @@ function renderCharacterTable(containerEl, characters) {
   let characterHTML = "";
   for (let character of characters) {
     characterHTML += `
-  
     <tr>
     <td>${character.name}</td>
     <td>${character.height}</td>
